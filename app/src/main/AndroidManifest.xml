@@ -11,13 +11,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ForgotPassword"></activity>
         <activity android:name=".Settings" />
-        <activity android:name=".Card" />
+        <activity android:name=".Cards" />
         <activity android:name=".PassbookSummary" />
-        <activity android:name=".PassbookStatement" />
+        <activity android:name=".PassbookStatements" />
         <activity android:name=".BenificiaryDetails" />
         <activity android:name=".MoneyTransfer" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main" />
+        <activity android:name=".MainActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

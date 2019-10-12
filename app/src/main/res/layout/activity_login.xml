@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".MainActivityLogin">
 
     <TextView
         android:id="@+id/ForgotPasswordTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="resetPassword"
         android:text="Forgot Password"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/SignINB"
@@ -23,12 +24,13 @@
         android:id="@+id/SignINB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="signInBank"
         android:text="Sign IN"
         android:textSize="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/PasswordTV"

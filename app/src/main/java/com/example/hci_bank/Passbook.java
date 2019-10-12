@@ -1,14 +1,14 @@
 package com.example.hci_bank;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class Login extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Passbook extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_passbook);
     }
 }
