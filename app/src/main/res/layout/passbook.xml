@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3,4">
+
+        <!-- first row of the table layout-->
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background=""
+            android:padding="18dip"
+            android:text="STATEMENT"
+            android:textColor="#000"
+            android:textSize="20dp" />
+            <TableRow
+                android:paddingTop="20dp"
+                android:id="@+id/firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:stretchColumns="0,1,2,3,4">
+                <!-- first element of the row-->
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#b0b0b0"
+                    android:padding="10dip"
+                    android:text="NAME"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#b0b0b0"
+                    android:padding="10dip"
+                    android:text="SEND/RECEIVE"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#b0b0b0"
+                    android:padding="10dip"
+                    android:text="AMOUNT"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+                <TextView
+
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#b0b0b0"
+                    android:padding="10dip"
+                    android:text="TIME"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+                <TextView
+
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#b0b0b0"
+                    android:padding="10dip"
+                    android:text="BALANCE"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+            </TableRow>
+            </TableLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3d455b"
+            android:layout_alignParentLeft="true" >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1,2,4,5">
+                <TableRow>
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="10dip"
+                        android:text="example1"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="10dip"
+                        android:text="example1"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/simple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="10dip"
+                        android:text="example1"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+                    <TextView
+
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="10dip"
+                        android:text="example1"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+                    <TextView
+
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#b0b0b0"
+                        android:padding="10dip"
+                        android:text="example1"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+</LinearLayout>
+
