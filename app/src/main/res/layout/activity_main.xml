@@ -1,106 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Main">
-
-    <Button
-        android:id="@+id/MoneyTranferB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openMoneyTranfer"
-        android:text="Money Transfer "
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
-
-    <Button
-        android:id="@+id/PassbookB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openPassbook"
-        android:text="Passbook"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
-    <Button
-        android:id="@+id/SettingsB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openSettings"
-        android:text="Settings"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.70" />
-
-    <Button
-        android:id="@+id/CardB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showUserCards"
-        android:text="Card "
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.40" />
-
-    <Button
-        android:id="@+id/SignOutB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="signOut"
-        android:text="Sign out"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
 
     <TextView
         android:id="@+id/NameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pranek Gupta"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227" />
-
-    <TextView
-        android:id="@+id/AccNo2TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12365212365"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/AccNo1TV"
@@ -108,39 +19,68 @@
         android:layout_height="wrap_content"
         android:text="Account Number"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:textStyle="bold" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+    <TextView
+        android:id="@+id/AccNo2TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12365212365"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/CurrentBalanceL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Balance"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/CurrentBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current Balance"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        android:text="$5,000"
+        android:textSize="18sp"/>
 
-    <TextView
-        android:id="@+id/CurrentBalance2"
+    <Button
+        android:id="@+id/MoneyTranferB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$5,000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:onClick="openMoneyTranfer"
+        android:text="Money Transfer "
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/PassbookB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openPassbook"
+        android:text="Passbook"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/SettingsB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openSettings"
+        android:text="Settings"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/CardB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showUserCards"
+        android:text="Card "
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/SignOutB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="signOut"
+        android:text="Sign out"
+        android:textSize="20sp"/>
+
+</LinearLayout>
