@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivityLogin">
 
-    <TextView
-        android:id="@+id/ForgotPasswordTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="resetPassword"
-        android:text="Forgot Password"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/SignINB"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/SignINB"
-        app:layout_constraintTop_toBottomOf="@+id/SignINB" />
+    <EditText
+        android:id="@+id/UserNameET"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="left"
+        android:hint="Enter Username"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edit_text"/>
 
+    <EditText
+        android:id="@+id/PasswordTV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:hint="Enter Password"
+        android:textSize="24sp"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edit_text"/>
 
     <Button
         android:id="@+id/SignINB"
@@ -27,34 +38,22 @@
         android:onClick="signInBank"
         android:text="Sign IN"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:shadowColor="@color/cardview_dark_background"
+        android:background="@drawable/round_corner_button"/>
 
-    <EditText
-        android:id="@+id/PasswordTV"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/SignINB"
-        app:layout_constraintEnd_toEndOf="@+id/SignINB"
-        app:layout_constraintStart_toStartOf="@+id/SignINB" />
+    <Button
+        android:id="@+id/ForgotPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="resetPassword"
+        android:text="Forgot Password ?"
+        android:textSize="24dp"
+        android:layout_gravity="center"
+        android:textColor="#00c3ff"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
 
-    <EditText
-        android:id="@+id/UserNameET"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
-        android:gravity="left"
-        android:hint="Enter Username"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/PasswordTV"
-        app:layout_constraintEnd_toEndOf="@+id/PasswordTV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/PasswordTV" />
-         />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
