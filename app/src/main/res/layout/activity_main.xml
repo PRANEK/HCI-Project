@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="16dp"
     tools:context=".Main">
 
     <TextView
@@ -11,37 +12,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pranek Gupta"
-        android:textSize="20sp" />
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"/>
 
-    <TextView
-        android:id="@+id/AccNo1TV"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Number"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/AccNo2TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12365212365"
-        android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:layout_alignParentLeft="true">
+            <TextView
+                android:id="@+id/AccNo1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/CurrentBalanceL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Current Balance"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/AccNo2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12365212365"
+                android:textSize="18sp"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/CurrentBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$5,000"
-        android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/CurrentBalanceL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CurrentBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$5,000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/MoneyTranferB"
