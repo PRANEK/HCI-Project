@@ -1,11 +1,12 @@
 package com.example.hci_bank;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivityLogin extends AppCompatActivity {
 
@@ -15,7 +16,16 @@ public class MainActivityLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_login);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void signInBank(View view) {
@@ -24,13 +34,15 @@ public class MainActivityLogin extends AppCompatActivity {
         if(username!=null && password!=null){
             username = null;
             password = null;
-            Intent nextActivity = new Intent(this,Main.class);
+            Intent nextActivity = new Intent(this, HomePage.class);
             startActivity(nextActivity);
+            finish();
         }
     }
 
     public void resetPassword(View view) {
         Intent nextActivity = new Intent(this,ForgotPassword.class);
         startActivity(nextActivity);
+        finish();
     }
 }

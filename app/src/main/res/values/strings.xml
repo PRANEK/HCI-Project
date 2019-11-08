@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">HCI_BANK</string>
+    <string name="benificiary_name">Benificiary Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="ifsc">IFSC</string>
+    <string name="card_number">4561 XXXX XXXX 1547</string>
+    <string name="valid_date">15/08/1999</string>
+    <string name="visa">VISA</string>
+    <string name="block_card">कार्ड बंद करे</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="mobile_hint">9867622542</string>
+    <string name="ask_contact_number">Enter Registered Contact Number</string>
+    <string name="passbook">पासबुक</string>
+    <string name="debit_card">डेबिट कार्ड</string>
+    <string name="money_transfer">पैसे भेजे</string>
+    <string name="setting">सेट्इन्ग</string>
+    <string name="sign_out">साइन आउट</string>
+    <string name="username">उपयोगकर्ता नाम</string>
+    <string name="password">पासवर्ड डाले</string>
+    <string name="forgot_password">पासवर्ड भूल गये ?</string>
+    <string name="sign_in">साइन इन</string>
+    <string name="add">ADD</string>
+    <string name="find">FIND</string>
+    <string name="delete">DELETE</string>
 </resources>

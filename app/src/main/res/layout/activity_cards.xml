@@ -1,91 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cards">
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/help_button"
+        android:elevation="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/question" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="380dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#EFFFFF"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_card"
+        android:orientation="vertical">
 
-
-        <TextView
-            android:id="@+id/CardNoTV"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="40dp"
-            android:text="4561  XXXX  XXXX  1547"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:padding="40dp">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="2dp"
+            card_view:cardCornerRadius="24dp">
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="386dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#EFFFFF"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/CardNoTV"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="40dp"
+                    android:text="@string/card_number"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="380dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="40dp">
+
+
+                    <TextView
+                        android:id="@+id/ValidDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="VALID DATE:"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ValidDate2TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/valid_date"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/VisaTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:paddingLeft="27dp"
+                        android:text="@string/visa"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/round_corner_button"
+            android:elevation="2dp">
+
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_corner_button"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/block_card" />
 
             <TextView
-                android:id="@+id/ValidDateTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="VALID DATE:"
-                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:paddingLeft="54dp"
+                android:text="@string/block_card"
+                android:textAllCaps="true"
+                android:textSize="32sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/ValidDate2TV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="15/08/1999"
-                android:textSize="20sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/VisaTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:paddingLeft="27dp"
-                android:text="VISA"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        </FrameLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/BlockCardB"
-        android:layout_width="wrap_content"
-        android:layout_height="125dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="108dp"
-        android:text="BLOCK CARD"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
