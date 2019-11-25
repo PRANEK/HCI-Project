@@ -1,4 +1,4 @@
-package com.example.hci_bank;
+package com.example.Bank;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,12 @@ import android.view.KeyEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Settings extends AppCompatActivity {
+public class Cards extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_cards);
     }
 
     @Override

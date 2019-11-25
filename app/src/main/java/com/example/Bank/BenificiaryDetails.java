@@ -1,8 +1,8 @@
-package com.example.hci_bank;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Bank;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BenificiaryDetails extends AppCompatActivity {
 

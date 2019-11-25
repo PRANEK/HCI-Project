@@ -1,4 +1,4 @@
-package com.example.hci_bank;
+package com.example.Bank;
 
 import android.content.Intent;
 import android.os.Bundle;
