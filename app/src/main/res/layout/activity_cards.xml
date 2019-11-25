@@ -5,18 +5,83 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
 
-    <ImageView
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/help_button"
-        android:elevation="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/question" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="हरीश कुमार"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/help_button"
+            android:elevation="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/question" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/AccNo1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="खाता संख्या"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12365212365"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/CurrentBalanceL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="शेष बैंक राशि"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CurrentBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹5,000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -28,29 +93,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="6dp"
             android:layout_marginBottom="2dp"
             card_view:cardCornerRadius="24dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="386dp"
+                android:layout_width="match_parent"
                 android:layout_height="201dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="#EFFFFF"
                 android:orientation="vertical">
 
 
                 <TextView
                     android:id="@+id/CardNoTV"
-                    android:layout_width="290dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="40dp"
                     android:text="@string/card_number"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -67,7 +128,7 @@
                         android:id="@+id/ValidDateTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"
+                        android:layout_marginLeft="5dp"
                         android:text="VALID DATE:"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -85,8 +146,7 @@
                         android:id="@+id/VisaTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:paddingLeft="27dp"
+                        android:paddingLeft="20dp"
                         android:text="@string/visa"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -99,8 +159,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/round_corner_button"
             android:elevation="2dp">
 
@@ -117,6 +178,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:paddingLeft="54dp"
                 android:text="@string/block_card"
                 android:textAllCaps="true"

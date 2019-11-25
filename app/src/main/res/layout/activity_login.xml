@@ -23,7 +23,7 @@
         android:gravity="center_horizontal">
 
         <EditText
-            android:id="@+id/UserNameET"
+            android:id="@+id/UsernameET"
             android:layout_width="320dp"
             android:layout_height="72dp"
             android:layout_marginBottom="40dp"
@@ -34,7 +34,7 @@
             android:background="@drawable/rounded_edit_text"/>
 
         <EditText
-            android:id="@+id/PasswordTV"
+            android:id="@+id/PassET"
             android:layout_width="320dp"
             android:layout_height="72dp"
             android:layout_marginBottom="40dp"
@@ -69,8 +69,15 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
         </FrameLayout>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:elevation="2dp"-->
+<!--            android:background="@drawable/round_corner_button"-->
+<!--            android:text = "@string/sign_in"-->
+<!--            />-->
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/ForgotPasswordTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,7 +90,8 @@
             android:textAllCaps="false"
             android:background="@drawable/round_corner_button"
             android:padding="10dp"
-            android:elevation="2dp"/>
+            android:elevation="2dp"
+            />
 
         </LinearLayout>
 </LinearLayout>

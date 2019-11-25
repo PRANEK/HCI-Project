@@ -1,138 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:visibility="visible"
     tools:context=".BenificiaryDetails"
     tools:visibility="visible">
 
-    <ImageView
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/help_button"
-        android:elevation="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/question"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/AddB"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="180dp"
-        android:text="ADD"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/NameTV"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
+        <TextView
 
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/benificiary_name"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="हरीश कुमार"
+            android:textSize="28sp" />
 
-    <TextView
-        android:id="@+id/AccNo2TV"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:text="@string/account_number"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/help_button"
+            android:elevation="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/question" />
 
-    <TextView
-        android:id="@+id/IFSCTV"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="336dp"
-        android:text="@string/ifsc"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/AccNo1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="खाता संख्या"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12365212365"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/CurrentBalanceL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="शेष बैंक राशि"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CurrentBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹5,000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
 
 
-    <EditText
-        android:id="@+id/NameET"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#EFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252"
-        tools:visibility="visible" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/OldPassET"
+            android:layout_width="320dp"
+            android:layout_height="72dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Enter Old Password"
+            android:padding="16dp"
+            android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/AccNoET"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339"
-        tools:visibility="visible" />
+        <EditText
+            android:id="@+id/NewPassET"
+            android:layout_width="320dp"
+            android:layout_height="72dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Enter New Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/IFSCET"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415"
-        tools:visibility="visible" />
+        <EditText
+            android:id="@+id/CNewPassET"
+            android:layout_width="320dp"
+            android:layout_height="72dp"
+            android:layout_gravity="left"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/ifsc"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="24sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/round_corner_button"
+            android:elevation="2dp">
+
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="64dp"
+
+                android:background="@drawable/round_corner_button"
+                android:padding="5dp"
+                android:scaleType="fitStart"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/add"
+                android:textAllCaps="true"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

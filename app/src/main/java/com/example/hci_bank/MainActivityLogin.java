@@ -29,8 +29,8 @@ public class MainActivityLogin extends AppCompatActivity {
     }
 
     public void signInBank(View view) {
-        username = ((EditText)findViewById(R.id.UserNameET)).getText().toString();
-        password = ((EditText)findViewById(R.id.PasswordTV)).getText().toString();
+        username = ((EditText)findViewById(R.id.UsernameET)).getText().toString();
+        password = ((EditText)findViewById(R.id.PassET)).getText().toString();
         if(username!=null && password!=null){
             username = null;
             password = null;
