@@ -1,8 +1,9 @@
-package com.example.hci_bank;
+package com.example.Bank;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,5 +24,17 @@ public class Settings extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void changePassword(View view) {
+        Intent nextActivity = new Intent(this, ForgotPassword.class);
+        startActivity(nextActivity);
+        finish();
+    }
+
+    public void changeLanguage(View view) {
+        Intent nextActivity = new Intent(this, ChangeLanguage.class);
+        startActivity(nextActivity);
+        finish();
     }
 }

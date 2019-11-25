@@ -1,4 +1,4 @@
-package com.example.hci_bank;
+package com.example.Bank;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,12 @@ import android.view.KeyEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MoneyTransfer extends AppCompatActivity {
+public class Passbook extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_money_transfer);
+        setContentView(R.layout.activity_passbook);
     }
 
     @Override
