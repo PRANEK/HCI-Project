@@ -129,38 +129,35 @@
         android:padding="20dp">
 
         <EditText
-            android:id="@+id/OldPassET"
+            android:id="@+id/BNameET"
             android:layout_width="340dp"
             android:layout_height="72dp"
             android:layout_gravity="start"
             android:layout_marginBottom="20dp"
             android:background="@drawable/focusable_edit_box"
-            android:hint="@string/old_password_hint"
-            android:inputType="textPassword"
+            android:hint="@string/benificiary_name"
             android:padding="16dp"
             android:textSize="24sp" />
 
         <EditText
             android:layout_width="340dp"
-            android:id="@+id/NewPassET"
+            android:id="@+id/AccNoBenficiaryET"
             android:background="@drawable/focusable_edit_box"
             android:layout_height="72dp"
             android:layout_gravity="start"
             android:layout_marginBottom="20dp"
-            android:hint="@string/new_password_hint"
-            android:inputType="textPassword"
+            android:hint="@string/account_number"
             android:padding="16dp"
             android:textSize="24sp" />
 
         <EditText
             android:layout_width="338dp"
-            android:id="@+id/CNewPassET"
+            android:id="@+id/IFSCBenificiaryET"
             android:background="@drawable/focusable_edit_box"
             android:layout_height="72dp"
             android:layout_gravity="left"
             android:layout_marginBottom="20dp"
             android:hint="@string/ifsc"
-            android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="24sp" />
 
