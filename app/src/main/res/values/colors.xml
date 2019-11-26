@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#283593</color>
-    <color name="colorAccent">#26A69A</color>
-    <color name="windowBackground">#E8EAF6</color>
-    <color name="colorSecondary">#D81B60</color>
+    <color name="colorPrimary">#BA68C8</color>
+    <color name="colorPrimaryDark">#6A1B9A</color>
+    <color name="windowBackground">#ECEFF1</color>
+    <color name="colorSecondary">#9FA8DA</color>
+    <color name="colorButton">#3949AB</color>
+    <color name="shadow">#546E7A</color>
+    <color name="focus">#29B6F6</color>
+    <color name="editbackground">#CFD8DC</color>
 </resources>

@@ -2,8 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:paddingRight="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorPrimary"
+                android:onClick="back"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary"
+                android:onClick="help"
+                android:src="@drawable/help" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,15 +62,6 @@
             android:layout_centerInParent="true"
             android:text="हरीश कुमार"
             android:textSize="28sp" />
-
-        <ImageView
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/help_button"
-            android:elevation="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/question" />
 
     </RelativeLayout>
 
@@ -220,40 +256,18 @@
                         android:textSize="24sp" />
 
                 </FrameLayout>
-
             </LinearLayout>
         </LinearLayout>
 
-        <FrameLayout
+        <include
+            android:id="@+id/sign_out_button_view"
+            layout="@layout/activity_sign_out_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_corner_button"
-            android:elevation="2dp">
-
-            <ImageButton
-                android:id="@+id/SignOutB"
-                android:layout_width="280dp"
-                android:layout_height="82dp"
-                android:layout_gravity="center"
-                android:background="@drawable/round_corner_button"
-                android:onClick="signOut"
-                android:padding="10dp"
-                android:scaleType="fitStart"
-                android:src="@drawable/logout" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingLeft="54dp"
-                android:text="@string/sign_out"
-                android:textAllCaps="true"
-                android:textSize="36sp"
-                android:textStyle="bold" />
-        </FrameLayout>
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="signOut" />
 
     </LinearLayout>
-
+    </LinearLayout>
 </LinearLayout>

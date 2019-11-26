@@ -1,66 +1,75 @@
 package com.example.Bank;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.view.ContextThemeWrapper;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.Locale;
-
-import androidx.annotation.StringDef;
 
 public class LocaleManager {
 
-    static final String ENGLISH = "en";
-    static final String HINDI = "hi";
-    private static final String LANGUAGE_KEY = "language_key";
+    private static Locale mLocale;
 
-    public static Context setLocale(Context mContext) {
-        return updateResources(mContext, getLanguagePref(mContext));
-    }
-
-    public static Context setNewLocale(Context mContext, @LocaleDef String language) {
-        setLanguagePref(mContext, language);
-        return updateResources(mContext, language);
-    }
-
-    public static String getLanguagePref(Context mContext) {
-        SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
-        return mPreferences.getString(LANGUAGE_KEY, ENGLISH);
-    }
-
-    private static void setLanguagePref(Context mContext, String localeKey) {
-        SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
-        mPreferences.edit().putString(LANGUAGE_KEY, localeKey).apply();
-    }
-
-    private static Context updateResources(Context context, String language) {
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-        Resources res = context.getResources();
-        Configuration config = new Configuration(res.getConfiguration());
-        if (Build.VERSION.SDK_INT >= 17) {
-            config.setLocale(locale);
-            context = context.createConfigurationContext(config);
-        } else {
-            config.locale = locale;
-            res.updateConfiguration(config, res.getDisplayMetrics());
+    public static void setLocale(Locale locale) {
+        mLocale = locale;
+        if (mLocale != null) {
+            Locale.setDefault(mLocale);
         }
-        return context;
     }
 
-    public static Locale getLocale(Resources res) {
-        Configuration config = res.getConfiguration();
-        return Build.VERSION.SDK_INT >= 24 ? config.getLocales().get(0) : config.locale;
+    public static void updateConfiguration(ContextThemeWrapper wrapper) {
+        if (mLocale != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            Configuration configuration = new Configuration();
+            configuration.setLocale(mLocale);
+            wrapper.applyOverrideConfiguration(configuration);
+        }
     }
 
-    @Retention(RetentionPolicy.SOURCE)
-    @StringDef({ENGLISH, HINDI})
-    public @interface LocaleDef {
-        String[] SUPPORTED_LOCALES = {ENGLISH, HINDI};
+    public static void updateConfiguration(Application application, Configuration configuration) {
+        if (mLocale != null && Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            Configuration config = new Configuration(configuration);
+            config.locale = mLocale;
+            Resources res = application.getBaseContext().getResources();
+            res.updateConfiguration(configuration, res.getDisplayMetrics());
+        }
+    }
+
+    public static void updateConfiguration(Context context, String language, String country) {
+        Locale locale = new Locale(language, country);
+        setLocale(locale);
+        if (mLocale != null) {
+            Resources res = context.getResources();
+            Configuration configuration = res.getConfiguration();
+            configuration.locale = mLocale;
+            res.updateConfiguration(configuration, res.getDisplayMetrics());
+        }
+    }
+
+
+    public static String getPrefLangCode(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("lang_code", "en");
+    }
+
+    public static void setPrefLangCode(Context context, String mPrefLangCode) {
+
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
+        editor.putString("lang_code", mPrefLangCode);
+        editor.commit();
+    }
+
+    public static String getPrefCountryCode(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("country_code", "US");
+    }
+
+    public static void setPrefCountryCode(Context context, String mPrefCountryCode) {
+
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
+        editor.putString("country_code", mPrefCountryCode);
+        editor.commit();
     }
 }

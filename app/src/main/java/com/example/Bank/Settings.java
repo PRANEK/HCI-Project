@@ -18,12 +18,16 @@ public class Settings extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent nextActivity = new Intent(this, HomePage.class);
-            startActivity(nextActivity);
-            finish();
-            return true;
+            return backPress();
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private boolean backPress() {
+        Intent nextActivity = new Intent(this, HomePage.class);
+        startActivity(nextActivity);
+        finish();
+        return true;
     }
 
     public void changePassword(View view) {
@@ -36,5 +40,12 @@ public class Settings extends AppCompatActivity {
         Intent nextActivity = new Intent(this, ChangeLanguage.class);
         startActivity(nextActivity);
         finish();
+    }
+
+    public void help(View view) {
+    }
+
+    public void back(View view) {
+        backPress();
     }
 }

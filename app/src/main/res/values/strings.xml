@@ -26,4 +26,6 @@
     <string name="change_password">"पासवर्ड बदले "</string>
     <string name="english">अंग्रेज़ी</string>
     <string name="hindi">हिन्दी</string>
+    <string name="helpsupport">HelpSupport</string>
+    <string name="back_button">Back</string>
 </resources>

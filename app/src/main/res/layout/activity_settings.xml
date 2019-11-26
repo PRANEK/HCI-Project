@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:paddingRight="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary"
+                android:onClick="back"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary"
+                android:onClick="help"
+                android:src="@drawable/help" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:orientation="horizontal">
 
         <TextView
@@ -16,24 +56,15 @@
             android:text="हरीश कुमार"
             android:textSize="28sp" />
 
-        <ImageView
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/help_button"
-            android:elevation="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/question" />
-
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="32dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -81,20 +112,21 @@
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
-<TextView
-    android:textStyle="bold"
-    android:layout_marginTop="10dp"
-    android:padding="10dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="CHANGE PASSWORD"
-    android:textSize="24dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:text="CHANGE PASSWORD"
+        android:textSize="24sp"
+        android:textStyle="bold"></TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="20dp"
         android:background="#EFFFFF"
@@ -105,68 +137,43 @@
         <EditText
             android:inputType="textPassword"
             android:id="@+id/OldPassET"
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_edit_text"
+            android:background="@drawable/focusable_edit_box"
             android:hint="Old Password"
             android:padding="16dp"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/NewPassET"
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_edit_text"
+            android:background="@drawable/focusable_edit_box"
             android:hint="New Password"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/CNewPassET"
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_edit_text"
+            android:background="@drawable/focusable_edit_box"
             android:hint="Confirm New Password"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
-        <FrameLayout
+        <include
+            layout="@layout/activity_forgot_password_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:background="@drawable/round_corner_button"
-            android:elevation="2dp">
-
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-
-                android:background="@drawable/round_corner_button"
-                android:padding="5dp"
-                android:scaleType="fitStart"></ImageButton>
-
-            <TextView
-                android:id="@+id/ConfirmB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/confirm_button"
-                android:textAllCaps="true"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-
-        </FrameLayout>
-
+            android:layout_margin="8dp" />
     </LinearLayout>
 </LinearLayout>

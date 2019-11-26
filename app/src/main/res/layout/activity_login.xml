@@ -1,97 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="24dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/question"
-        android:background="@drawable/help_button"
-        android:elevation="5dp"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:paddingRight="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary"
+                android:onClick="help"
+                android:src="@drawable/help" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal">
+        android:layout_margin="16dp"
+        android:gravity="center">
 
         <EditText
             android:id="@+id/UsernameET"
             android:layout_width="320dp"
             android:layout_height="72dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="16dp"
             android:hint="@string/username"
             android:textSize="24sp"
             android:padding="16dp"
             android:layout_gravity="center"
-            android:background="@drawable/rounded_edit_text"/>
+            android:background="@drawable/focusable_edit_box" />
 
         <EditText
             android:id="@+id/PassET"
             android:layout_width="320dp"
             android:layout_height="72dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="16dp"
             android:hint="@string/password"
             android:textSize="24sp"
             android:inputType="textPassword"
             android:padding="16dp"
             android:layout_gravity="center"
-            android:background="@drawable/rounded_edit_text"/>
+            android:background="@drawable/focusable_edit_box" />
 
-        <FrameLayout
+        <include
+            android:id="@+id/sign_in_button_view"
+            layout="@layout/activity_sign_in_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:elevation="2dp"
-            android:background="@drawable/round_corner_button">
-            <ImageButton
-                android:layout_width="260dp"
-                android:layout_height="82dp"
-                android:layout_gravity="center"
-                android:background="@drawable/round_corner_button"
-                android:src="@drawable/unlock"
-                android:padding="10dp"
-                android:onClick="signInBank"
-                android:scaleType="fitStart" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_in"
-                android:textAllCaps="true"
-                android:textSize="36sp"
-                android:paddingLeft="54dp"
-                android:textStyle="bold"
-                android:layout_gravity="center"/>
-        </FrameLayout>
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:elevation="2dp"-->
-<!--            android:background="@drawable/round_corner_button"-->
-<!--            android:text = "@string/sign_in"-->
-<!--            />-->
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:onClick="signInBank" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/ForgotPasswordTV"
-            android:layout_width="wrap_content"
+        <include
+            android:id="@+id/reset_password_button_view"
+            layout="@layout/activity_login_forgot_password_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:onClick="resetPassword"
-            android:text="@string/forgot_password"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:textColor="#4046ff"
-            android:textAllCaps="false"
-            android:background="@drawable/round_corner_button"
-            android:padding="10dp"
-            android:elevation="2dp"
-            />
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:onClick="resetPassword" />
+
 
         </LinearLayout>
 </LinearLayout>

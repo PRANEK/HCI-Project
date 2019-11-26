@@ -3,6 +3,7 @@ package com.example.Bank;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,11 +18,22 @@ public class ForgotPassword extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent nextActivity = new Intent(this, MainActivityLogin.class);
-            startActivity(nextActivity);
-            finish();
-            return true;
+            return backPress();
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private boolean backPress() {
+        Intent nextActivity = new Intent(this, MainActivityLogin.class);
+        startActivity(nextActivity);
+        finish();
+        return true;
+    }
+
+    public void help(View view) {
+    }
+
+    public void back(View view) {
+        backPress();
     }
 }

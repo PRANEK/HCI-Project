@@ -15,6 +15,8 @@ public class HomePage extends AppCompatActivity {
     private String name = "Abcd Pqrs";
     private String balance = "999999";
 
+    private View signOutButtonView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,15 @@ public class HomePage extends AppCompatActivity {
 //        ((TextView)findViewById(R.id.NameTV)).setText(name);
 //        ((TextView)findViewById(R.id.CurrentBalanceL)).setText(balance);
         setContentView(R.layout.activity_home_page);
+
+        signOutButtonView = findViewById(R.id.sign_out_button_view);
+        signOutButtonView.setClickable(true);
+        signOutButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HomePage.this.signOut(v);
+            }
+        });
     }
 
     @Override
@@ -79,5 +90,12 @@ public class HomePage extends AppCompatActivity {
         name = null;
         balance = null;
         confirmLogOut();
+    }
+
+    public void help(View view) {
+    }
+
+    public void back(View view) {
+        signOut(view);
     }
 }
