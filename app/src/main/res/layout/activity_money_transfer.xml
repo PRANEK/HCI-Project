@@ -40,81 +40,108 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:stretchColumns="0,1,2">
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/NameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/user_name"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/help_button"
+            android:elevation="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/question" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:id="@+id/AccNo1TV"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NAMES"
+                android:text="@string/account_number"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AccNo2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12365212365"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/CurrentBalanceL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remain_balance"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CurrentBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹@string/balance_value"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="example1"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <TextView
+            <EditText
                 android:id="@+id/productID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AMOUNT"
+                android:hint="example2"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textVie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="STATUS"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="na"
+                android:hint="example3"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <EditText
-                android:id="@+id/productName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/productQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal" />
-        </TableRow>
-    </TableLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:orientation="horizontal">
@@ -123,18 +150,20 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add" />
+            android:text="confirm_payment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/delete" />
+            android:text="-add-" />
     </LinearLayout>
 </LinearLayout>

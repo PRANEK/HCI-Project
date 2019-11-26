@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="हरीश कुमार"
+            android:text="@string/user_name"
             android:textSize="28sp" />
 
     </RelativeLayout>
@@ -74,7 +74,7 @@
                 android:id="@+id/AccNo1TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="खाता संख्या"
+                android:text="@string/account_number"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -97,7 +97,7 @@
                 android:id="@+id/CurrentBalanceL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="शेष बैंक राशि"
+                android:text="@string/remain_balance"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -105,7 +105,7 @@
                 android:id="@+id/CurrentBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹5,000"
+                android:text="@string/balance_value"
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
@@ -143,9 +143,9 @@
                     android:background="#b0b0b0"
                     android:gravity="center_horizontal"
                     android:padding="10dip"
-                    android:text="NAME"
+                    android:text="@string/name_placeholder"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -154,9 +154,9 @@
                     android:background="#b0b0b0"
                     android:gravity="center_horizontal"
                     android:padding="10dip"
-                    android:text="SEND/RECEIVE"
+                    android:text="@string/send_receive_placeholder"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -165,9 +165,9 @@
                     android:background="#b0b0b0"
                     android:gravity="center_horizontal"
                     android:padding="10dip"
-                    android:text="AMOUNT"
+                    android:text="@string/amount_placeholder"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -176,9 +176,9 @@
                     android:background="#b0b0b0"
                     android:gravity="center_horizontal"
                     android:padding="10dip"
-                    android:text="TIME"
+                    android:text="@string/time_placeholder"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -187,9 +187,9 @@
                     android:background="#b0b0b0"
                     android:gravity="center_horizontal"
                     android:padding="10dip"
-                    android:text="BALANCE"
+                    android:text="@string/balance_placeholder"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
 
             </LinearLayout>
@@ -212,7 +212,7 @@
                 android:padding="10dip"
                 android:text="example1"
                 android:textColor="#000"
-                android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -223,7 +223,7 @@
                     android:padding="10dip"
                     android:text="example1"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -235,7 +235,7 @@
                     android:padding="10dip"
                     android:text="example1"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -246,7 +246,7 @@
                     android:padding="10dip"
                     android:text="example1"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -257,7 +257,7 @@
                     android:padding="10dip"
                     android:text="example1"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
 
 
@@ -273,6 +273,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp" />
+        android:layout_marginRight="24dp"
+        android:text="@string/down_button" />
 
 </LinearLayout>

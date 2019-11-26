@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="हरीश कुमार"
+            android:text="@string/user_name"
             android:textSize="28sp" />
 
     </RelativeLayout>
@@ -77,7 +77,7 @@
                 android:id="@+id/AccNo1TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="खाता संख्या"
+                android:text="@string/account_number"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -100,7 +100,7 @@
                 android:id="@+id/CurrentBalanceL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="शेष बैंक राशि"
+                android:text="@string/remain_balance"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -108,7 +108,7 @@
                 android:id="@+id/CurrentBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹5,000"
+                android:text="@string/balance_value"
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
@@ -119,9 +119,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:padding="10dp"
-        android:text="CHANGE PASSWORD"
-        android:textSize="24sp"
-        android:textStyle="bold"></TextView>
+        android:text="@string/change_password"
+        android:textSize="28sp"
+        android:textStyle="bold" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -141,8 +141,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
+            android:hint="@string/old_password_hint"
             android:background="@drawable/focusable_edit_box"
-            android:hint="Old Password"
             android:padding="16dp"
             android:textSize="20sp" />
 
@@ -152,8 +152,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
+            android:hint="@string/new_paasword_hint"
             android:background="@drawable/focusable_edit_box"
-            android:hint="New Password"
             android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="20sp" />
@@ -164,8 +164,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginBottom="10dp"
+            android:hint="@string/confirm_new_password_hint"
             android:background="@drawable/focusable_edit_box"
-            android:hint="Confirm New Password"
             android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="20sp" />

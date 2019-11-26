@@ -22,10 +22,25 @@
     <string name="username">Username</string>
     <string name="valid_date">Valid Date</string>
     <string name="visa">VISA</string>
-    <string name="find">find</string>
+    <string name="find">Find</string>
     <string name="change_password">Change Password</string>
     <string name="english">English</string>
     <string name="hindi">Hindi</string>
     <string name="change_language">Change Language</string>
     <string name="back_button">Back</string>
+    <string name="remain_balance">Balance</string>
+    <string name="balance_value">₹5,000</string>
+    <string name="old_password_hint">Enter Old Password</string>
+    <string name="new_paasword_hint">Enter New Password</string>
+    <string name="valid_date_text">VALID DATE:</string>
+    <string name="send_receive_placeholder">Send/Receive</string>
+    <string name="amount_placeholder">Amount</string>
+    <string name="time_placeholder">Time</string>
+    <string name="balance_placeholder">Balance</string>
+    <string name="down_button">Down</string>
+    <string name="confirm_new_password_hint">Confirm New Password</string>
+    <string name="user_name">Harish Kumar</string>
+    <string name="name_placeholder">Name</string>
+    <string name="helpsupport">Help Support</string>
+    <string name="change_password">Change Password</string>
 </resources>

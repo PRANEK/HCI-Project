@@ -60,8 +60,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="हरीश कुमार"
+            android:text="@string/user_name"
             android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/help_button"
+            android:elevation="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/question" />
 
     </RelativeLayout>
 
@@ -82,7 +92,7 @@
                 android:id="@+id/AccNo1TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="खाता संख्या"
+                android:text="@string/account_number"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -105,7 +115,7 @@
                 android:id="@+id/CurrentBalanceL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="शेष बैंक राशि"
+                android:text="@string/remain_balance"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -113,7 +123,7 @@
                 android:id="@+id/CurrentBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹5,000"
+                android:text="₹@string/balance_value"
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
