@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner_button"
+    android:clickable="true"
+    android:defaultFocusHighlightEnabled="true"
+    android:elevation="6dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/shadow"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/debit_card"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp" />
+</LinearLayout>

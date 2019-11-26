@@ -128,9 +128,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:layout_weight="1">
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -138,62 +138,20 @@
                 android:layout_alignParentLeft="true"
                 android:layout_weight="1"
                 android:gravity="left"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                <include
+                    layout="@layout/activity_home_passbook_button"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp" />
 
-                    <ImageButton
-                        android:id="@+id/PassbookB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/round_corner_button"
-                        android:onClick="openPassbook"
-                        android:scaleType="fitStart"
-                        android:src="@drawable/passbook" />
+                <include
+                    layout="@layout/activity_home_card_button"
+                    android:layout_width="155dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="12dp"
-                        android:gravity="center"
-                        android:text="@string/passbook"
-                        android:textSize="24sp" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <ImageButton
-                        android:id="@+id/CardB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/round_corner_button"
-                        android:onClick="showUserCards"
-                        android:scaleType="fitStart"
-                        android:src="@drawable/card" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="12dp"
-                        android:gravity="center"
-                        android:text="@string/debit_card"
-                        android:textSize="24sp" />
-
-                </FrameLayout>
 
             </LinearLayout>
 
@@ -203,61 +161,21 @@
                 android:layout_alignParentRight="true"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                <include
+                    layout="@layout/activity_home_money_button"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp" />
 
-                    <ImageButton
-                        android:id="@+id/MoneyTranferB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/round_corner_button"
-                        android:onClick="openMoneyTranfer"
-                        android:scaleType="fitStart"
-                        android:src="@drawable/money_transfer" />
+                <include
+                    layout="@layout/activity_home_settings_button"
+                    android:layout_width="157dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="12dp"
-                        android:gravity="center_horizontal"
-                        android:text="@string/money_transfer"
-                        android:textSize="24sp" />
-                </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <ImageButton
-                        android:id="@+id/SettingB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/round_corner_button"
-                        android:onClick="openSettings"
-                        android:scaleType="fitStart"
-                        android:src="@drawable/settings" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="12dp"
-                        android:gravity="center"
-                        android:text="@string/setting"
-                        android:textSize="24sp" />
-
-                </FrameLayout>
             </LinearLayout>
         </LinearLayout>
 

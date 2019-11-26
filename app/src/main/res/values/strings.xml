@@ -27,6 +27,7 @@
     <string name="english">अंग्रेज़ी</string>
     <string name="hindi">हिन्दी</string>
     <string name="user_name">हरीश कुमार</string>
+
     <string name="remain_balance">शेष बैंक राशि</string>
     <string name="balance_value">₹5,000</string>
     <string name="old_password_hint">पुराना पासवर्ड डालो</string>

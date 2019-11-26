@@ -64,6 +64,7 @@
         android:layout_marginBottom="16dp">
 
         <LinearLayout
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -87,6 +88,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -115,6 +117,7 @@
         android:layout_width="340dp"
         android:layout_height="72dp"
         android:layout_gravity="start"
+        android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/focusable_edit_box"
         android:hint="@string/account_number"
@@ -127,6 +130,7 @@
         android:layout_height="72dp"
         android:layout_gravity="start"
         android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/focusable_edit_box"
         android:hint="@string/ifsc"
         android:padding="10dp"
@@ -138,6 +142,7 @@
         android:layout_height="72dp"
         android:layout_gravity="left"
         android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/focusable_edit_box"
         android:hint="@string/amount_placeholder"
         android:padding="10dp"
