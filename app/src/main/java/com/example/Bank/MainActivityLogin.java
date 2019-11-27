@@ -54,6 +54,8 @@ public class MainActivityLogin extends AppCompatActivity {
 
     public void signInBank(View view) {
         Log.d("error", "Hii");
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         username = ((EditText)findViewById(R.id.UsernameET)).getText().toString();
         password = ((EditText)findViewById(R.id.PassET)).getText().toString();
         if(username!=null && password!=null){
@@ -67,18 +69,21 @@ public class MainActivityLogin extends AppCompatActivity {
 
     public void resetPassword(View view) {
         Log.d("error", "hello");
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this,ForgotPassword.class);
         startActivity(nextActivity);
         finish();
     }
 
     public void back(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         finish();
     }
 
     public void help(View view) {
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.audio);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
         mp.start();
-        mp.setLooping(true); //TODO: Remove this!
     }
 }

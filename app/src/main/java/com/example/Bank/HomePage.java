@@ -3,6 +3,7 @@ package com.example.Bank;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -46,8 +47,8 @@ public class HomePage extends AppCompatActivity {
 
     private void confirmLogOut() {
         new AlertDialog.Builder(this)
-                .setTitle("Sign Out")
-                .setMessage("Are you sure you want to exit?")
+                .setTitle(R.string.sign_out)
+                .setMessage("क्या आप बाहर निकलना चाहते है ?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -61,6 +62,8 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void openMoneyTranfer(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this,MoneyTransfer.class);
         startActivity(nextActivity);
         finish();
@@ -68,18 +71,24 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void openPassbook(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this,Passbook.class);
         startActivity(nextActivity);
         finish();
     }
 
     public void openSettings(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this,Settings.class);
         startActivity(nextActivity);
         finish();
     }
 
     public void showUserCards(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this,Cards.class);
         startActivity(nextActivity);
         finish();
@@ -89,13 +98,19 @@ public class HomePage extends AppCompatActivity {
         accNo = null;
         name = null;
         balance = null;
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         confirmLogOut();
     }
 
     public void help(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+        mp.start();
     }
 
     public void back(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         signOut(view);
     }
 }

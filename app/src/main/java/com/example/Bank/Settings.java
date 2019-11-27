@@ -1,6 +1,7 @@
 package com.example.Bank;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -31,21 +32,29 @@ public class Settings extends AppCompatActivity {
     }
 
     public void changePassword(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this, ForgotPassword.class);
         startActivity(nextActivity);
         finish();
     }
 
     public void changeLanguage(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         Intent nextActivity = new Intent(this, ChangeLanguage.class);
         startActivity(nextActivity);
         finish();
     }
 
     public void help(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+        mp.start();
     }
 
     public void back(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         backPress();
     }
 }

@@ -1,6 +1,7 @@
 package com.example.Bank;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,6 +35,8 @@ public class Cards extends AppCompatActivity {
     }
 
     public void back(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         backPress();
     }
 }

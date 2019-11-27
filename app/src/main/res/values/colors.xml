@@ -5,7 +5,7 @@
     <color name="windowBackground">#ECEFF1</color>
     <color name="colorSecondary">#9FA8DA</color>
     <color name="colorButton">#3949AB</color>
-    <color name="shadow">#546E7A</color>
+    <color name="shadow">#eceff1</color>
     <color name="focus">#29B6F6</color>
     <color name="editbackground">#CFD8DC</color>
 </resources>

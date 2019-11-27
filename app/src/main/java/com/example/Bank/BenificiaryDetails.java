@@ -1,5 +1,6 @@
 package com.example.Bank;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,9 +15,13 @@ public class BenificiaryDetails extends AppCompatActivity {
     }
 
     public void back(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
         onBackPressed();
     }
 
     public void help(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+        mp.start();
     }
 }

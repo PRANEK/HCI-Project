@@ -11,7 +11,6 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:paddingRight="16dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
@@ -30,12 +29,14 @@
                 android:src="@drawable/back" />
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@color/colorPrimary"
                 android:onClick="help"
+                android:scaleType="centerCrop"
                 android:src="@drawable/help" />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -74,7 +75,7 @@
                 android:id="@+id/AccNo1TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_number"
+                android:text="@string/account_placeholder"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
