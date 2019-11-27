@@ -31,6 +31,7 @@ public class ForgotPassword extends AppCompatActivity {
         return true;
     }
 
+
     public void help(View view) {
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
         mp.start();

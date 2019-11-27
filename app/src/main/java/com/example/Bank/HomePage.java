@@ -94,6 +94,7 @@ public class HomePage extends AppCompatActivity {
         finish();
     }
 
+
     public void signOut(View view) {
         accNo = null;
         name = null;
