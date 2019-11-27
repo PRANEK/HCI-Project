@@ -9,11 +9,20 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MoneyTransfer extends AppCompatActivity {
+    private View addbeneView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_transfer);
+        addbeneView = findViewById(R.id.activity_benificiary_add_button);
+        addbeneView.setClickable(true);
+        addbeneView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MoneyTransfer.this.addbene(v);
+            }
+        });
     }
 
     @Override
@@ -38,7 +47,17 @@ public class MoneyTransfer extends AppCompatActivity {
     }
 
     public void help(View view) {
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.money_transfer);
         mp.start();
+
+    }
+
+    public void addbene(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        mp.start();
+        Intent nextActivity = new Intent(this, BenificiaryDetails.class);
+        startActivity(nextActivity);
+        finish();
     }
 }

@@ -83,7 +83,7 @@ public class MainActivityLogin extends AppCompatActivity {
     }
 
     public void help(View view) {
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.login);
         mp.start();
     }
 }

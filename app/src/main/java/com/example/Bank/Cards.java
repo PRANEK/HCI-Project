@@ -32,6 +32,8 @@ public class Cards extends AppCompatActivity {
     }
 
     public void help(View view) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.cards);
+        mp.start();
     }
 
     public void back(View view) {

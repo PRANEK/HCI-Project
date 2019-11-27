@@ -104,7 +104,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void help(View view) {
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.intro);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.home);
         mp.start();
     }
 

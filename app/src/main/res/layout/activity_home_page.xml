@@ -164,6 +164,7 @@
                         android:layout_marginBottom="12dp"
                         android:gravity="center"
                         android:text="@string/passbook"
+                        android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
 
@@ -191,6 +192,7 @@
                         android:layout_marginBottom="12dp"
                         android:gravity="center"
                         android:text="@string/debit_card"
+                        android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 
                 </FrameLayout>
@@ -229,6 +231,7 @@
                         android:layout_marginBottom="12dp"
                         android:gravity="center_horizontal"
                         android:text="@string/money_transfer"
+                        android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
 
@@ -255,6 +258,7 @@
                         android:layout_marginBottom="12dp"
                         android:gravity="center"
                         android:text="@string/setting"
+                        android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 
                 </FrameLayout>
